@@ -1,0 +1,340 @@
+
+/* ==========================================
+   Prakash Pandey — Personal Engineering Blog
+   Hugo + PaperMod
+   ========================================== */
+
+/* Soft, warm light theme */
+:root {
+  --soft-accent: #a66e50;
+  --soft-accent-hover: #825239;
+  --soft-border: #e9e1d8;
+  --soft-shadow: 0 8px 28px rgba(61, 43, 28, 0.045);
+}
+
+[data-theme="light"] {
+  --theme: #faf8f4;
+  --entry: #fffdf9;
+  --primary: #302d29;
+  --secondary: #77716a;
+  --tertiary: #eee7df;
+  --content: #49443e;
+  --border: #e9e1d8;
+  --code-block-bg: #f2eee8;
+  --code-bg: #f0ebe4;
+}
+
+/* Global typography and page */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  letter-spacing: -0.012em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  max-width: 800px;
+  min-height: 72vh;
+  padding-top: 34px;
+}
+
+/* Header */
+.header {
+  background: var(--theme);
+}
+
+.logo a {
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+#menu a {
+  font-size: 14px;
+  transition: color 160ms ease;
+}
+
+#menu a:hover {
+  color: var(--soft-accent);
+}
+
+/* Homepage introduction */
+.home-info {
+  margin: 18px 0 42px;
+  padding: 28px 30px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--soft-shadow);
+}
+
+.home-info .entry-content {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Homepage featured post */
+.first-entry {
+  position: relative;
+  min-height: auto;
+  margin: 22px 0 32px;
+  padding: 30px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--soft-shadow);
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.first-entry:hover {
+  transform: translateY(-3px);
+  border-color: #d5c2b1;
+  box-shadow: 0 14px 34px rgba(61, 43, 28, 0.085);
+}
+
+.first-entry .entry-header h2 {
+  font-size: clamp(24px, 4vw, 31px);
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+.entry-content {
+  color: var(--secondary);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.entry-footer {
+  margin-top: 18px;
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+/* Standard post cards */
+.post-entry {
+  margin-bottom: 20px;
+  padding: 24px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(61, 43, 28, 0.025);
+  transition: transform 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.post-entry:hover {
+  transform: translateY(-2px);
+  border-color: #d5c2b1;
+  box-shadow: var(--soft-shadow);
+}
+
+.post-entry .entry-header h2 {
+  font-size: 23px;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.post-entry .entry-content {
+  margin-top: 10px;
+}
+
+/* Individual article */
+.post-single {
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.post-header {
+  margin-bottom: 34px;
+}
+
+.post-title {
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.post-description {
+  margin-top: 16px;
+  color: var(--secondary);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.post-content {
+  font-size: 17px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.post-content p {
+  margin-bottom: 1.35em;
+}
+
+.post-content h2 {
+  margin-top: 2.2em;
+  margin-bottom: 0.75em;
+  font-size: 27px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.post-content h3 {
+  margin-top: 1.8em;
+  font-size: 21px;
+  line-height: 1.45;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-inline-start: 1.5em;
+}
+
+.post-content li {
+  margin: 0.45em 0;
+}
+
+.post-content a {
+  color: var(--soft-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.post-content a:hover {
+  color: var(--soft-accent-hover);
+}
+
+/* Code samples */
+.post-content pre {
+  margin: 1.5em 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.post-content pre code {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.post-content code:not(pre code) {
+  padding: 0.15em 0.35em;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+
+.post-content blockquote {
+  margin: 1.5em 0;
+  padding: 12px 20px;
+  border-inline-start: 3px solid var(--soft-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Table of contents */
+.toc {
+  margin: 24px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.toc summary {
+  font-weight: 650;
+}
+
+/* Tags */
+.post-tags a {
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 4px 12px;
+  transition: background 160ms ease;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 16px;
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .main {
+    padding-top: 20px;
+  }
+
+  .home-info {
+    margin-bottom: 28px;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .first-entry {
+    margin: 18px 0 26px;
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .post-entry {
+    padding: 20px;
+    border-radius: 13px;
+  }
+
+  .post-entry .entry-header h2 {
+    font-size: 21px;
+  }
+
+  .post-title {
+    font-size: 32px;
+  }
+
+  .post-description {
+    font-size: 15px;
+  }
+
+  .post-content {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .post-content h2 {
+    font-size: 24px;
+  }
+
+  .post-content h3 {
+    font-size: 20px;
+  }
+
+  .post-content pre {
+    padding: 14px;
+    border-radius: 9px;
+  }
+
+  .post-content pre code {
+    font-size: 13px;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .first-entry,
+  .post-entry,
+  #menu a {
+    transition: none;
+  }
+
+  .first-entry:hover,
+  .post-entry:hover {
+    transform: none;
+  }
+}
