@@ -1,26 +1,35 @@
-
 baseURL = "https://prakashpandey1508.github.io/"
 languageCode = "en-us"
 title = "Prakash Pandey"
 theme = "PaperMod"
 
+[pagination]
+  pagerSize = 10
+
 [params]
+  env = "production"
+  description = "Notes on backend engineering, Ruby on Rails, Go, databases, APIs, and system design."
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  ShowToc = true
 
 [params.homeInfoParams]
   Title = "Hey, I'm Prakash 👋"
-  Content = "Backend engineer who enjoys building reliable systems, exploring databases, and understanding how software works under the hood. Here, I share practical lessons from Ruby on Rails, Go, backend engineering, and system design."
+  Content = "Backend engineer who enjoys building reliable systems, exploring databases, and understanding how software works under the hood. Here, I share practical lessons from Ruby on Rails, Go, databases, APIs, and system design."
 
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/prakashpandey1508"
 
-[menu]
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 5
 
 [[menu.main]]
   identifier = "posts"
@@ -29,7 +38,13 @@ theme = "PaperMod"
   weight = 10
 
 [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 20
+
+[[menu.main]]
   identifier = "archives"
   name = "Archives"
   url = "/archives/"
-  weight = 20
+  weight = 30
